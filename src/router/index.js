@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import CreatePost from '../views/CreatePost.vue';
+import Questions from '../views/Questions.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/create',
     name: 'PostCreate',
     component: CreatePost,
+  },
+  {
+    path: '/questions',
+    name: 'Questions',
+    component: Questions,
   },
   {
     path: '/about',

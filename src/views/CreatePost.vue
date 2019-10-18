@@ -222,7 +222,9 @@ export default {
           choc: this.c_four.choc,
           ans: this.c_four.ans,
         },
+        created_at: firebase.firestore.FieldValue.serverTimestamp(),
       }).then((docRef) => {
+        this.$router.push('/questions');
         console.log(docRef);
       }).catch((error) => {
         console.log(error);
