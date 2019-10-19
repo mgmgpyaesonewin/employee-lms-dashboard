@@ -18,6 +18,7 @@
                   <abbr title="Questions">#</abbr>
                 </th>
                 <th>Title</th>
+                <th>Image</th>
                 <th>
                   Body
                 </th>
@@ -30,6 +31,9 @@
                 <th>{{ index + 1 }}</th>
                 <td>
                   {{ question.title }}
+                </td>
+                <td>
+                  <img class="image is-128x128" alt="Google Logo" :src="question.downloadURL" />
                 </td>
                 <td>{{ question.body }}</td>
                 <td>{{ question.created_at }}</td>
@@ -77,11 +81,13 @@ export default {
     this.ref.onSnapshot((querySnapshot) => {
       this.questions = [];
       querySnapshot.forEach((doc) => {
+        console.log(doc.data());
         this.questions.push({
           key: doc.id,
           title: doc.data().title,
           body: doc.data().body,
           created_at: moment(doc.data().created_at.toDate()).format('DD-MM-YYYY'),
+          downloadURL: doc.data().downloadURL,
         });
       });
     });
