@@ -3,10 +3,9 @@
     <div id="nav">
       <nav class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-          </a>
-
+          <div>
+            <img src="./assets/performa-white.png" />
+          </div>
           <a
             role="button"
             class="navbar-burger burger"
@@ -48,6 +47,7 @@
           </div>
         </div>
       </nav>
+      <br/>
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>
     </div>
